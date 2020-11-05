@@ -1,5 +1,6 @@
 import java.util.Iterator;
 public class IntBagStepIterator implements Iterator{
+    //properties
     private IntBag aBag;
     private int step;
     private int index;
@@ -9,6 +10,11 @@ public class IntBagStepIterator implements Iterator{
         step = m;
         index = 0;
     }
+
+    /**
+     * a method to convert next value of the array to object
+     * @return obj the next int
+     */
     @Override
     public Object next()
     {
@@ -17,6 +23,10 @@ public class IntBagStepIterator implements Iterator{
        return obj;
     }
 
+    /**
+     * a method to check if there is next int or not
+     * @return boolean after checking
+     */
     @Override
     public boolean hasNext() {
         if( index + step <= aBag.calculateSize())
